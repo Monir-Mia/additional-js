@@ -1,4 +1,4 @@
-# additional-js
+## README for additional-css
 
 This folder contains additional JavaScript files used for extending the functionality of the main project.
 
@@ -12,7 +12,7 @@ This folder contains additional JavaScript files used for extending the function
 - Keep the code clean and well-commented for easy maintenance.
 
 ## Usage
-- ❗ Important Note
+## ❗ Important Note
 - All JS code in this folder is created by Monir Mia.
 - It is forbidden to use this code without my permission.
 - No one can copy, use or distribute this code.
