@@ -1,6 +1,5 @@
-/* === Headline Hover Animation === */
 document.addEventListener("DOMContentLoaded", function () {
-  const target = document.querySelector(".animated-gradient");
+  const target = document.querySelector(".super-gradient");
   if (target) {
     const text = target.textContent.trim();
     const chars = text.split("");
@@ -12,4 +11,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
