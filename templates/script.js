@@ -5,9 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const text = target.textContent.trim();
     const chars = text.split("");
     target.innerHTML = "";
+
     chars.forEach((char) => {
       const span = document.createElement("span");
-      span.textContent = char;
+      // যদি স্পেস হয়, তাহলে &nbsp; সেট করো
+      span.innerHTML = char === " " ? "&nbsp;" : char;
       target.appendChild(span);
     });
   });
