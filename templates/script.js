@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const target = document.querySelector(".super-gradient");
-  if (target) {
+  const elements = document.querySelectorAll(".super-gradient");
+
+  elements.forEach((target) => {
     const text = target.textContent.trim();
     const chars = text.split("");
     target.innerHTML = "";
@@ -9,5 +10,5 @@ document.addEventListener("DOMContentLoaded", function () {
       span.textContent = char;
       target.appendChild(span);
     });
-  }
+  });
 });
