@@ -19,7 +19,7 @@
 
 /* হোভার করলে অক্ষর ঘুরে সাদা হবে */
 .animated-gradient:hover span {
-  color: white;
+  color: #F1BCBC;
   -webkit-text-fill-color: white;
   transform: rotateY(360deg);
 }
