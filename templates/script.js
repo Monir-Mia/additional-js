@@ -1,5 +1,4 @@
 /* === Headline Hover Animation === */
-<script>
 document.addEventListener("DOMContentLoaded", function () {
   const target = document.querySelector(".animated-gradient");
   if (target) {
@@ -13,4 +12,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-</script>
+
