@@ -1,4 +1,10 @@
 /* === গ্রাডিয়েন্ট টেক্সট এবং হোভার অ্যানিমেশন === */
+.gradient-heading {
+  font-size: 5vw;
+  text-align: center;
+  line-height: 1.2;
+}
+
 .animated-gradient {
   display: inline-block;
   font-weight: bold;
@@ -14,14 +20,12 @@
   transform-origin: bottom;
 }
 
-/* হোভার করলে অক্ষর ঘুরে সাদা হবে */
 .animated-gradient:hover span {
   color: white;
   -webkit-text-fill-color: white;
   transform: rotateY(360deg);
 }
 
-/* অ্যানিমেশন ওয়েভ delay */
 .animated-gradient span:nth-child(1) { transition-delay: 0s; }
 .animated-gradient span:nth-child(2) { transition-delay: 0.05s; }
 .animated-gradient span:nth-child(3) { transition-delay: 0.1s; }
