@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const elements = document.querySelectorAll(".super-gradient");
+  const targets = document.querySelectorAll(".animated-gradient");
 
-  elements.forEach((target) => {
+  targets.forEach(target => {
     const text = target.textContent.trim();
     const chars = text.split("");
     target.innerHTML = "";
