@@ -1,34 +1,39 @@
-/* === গ্রাডিয়েন্ট টেক্সট অ্যানিমেশন (হোভার ছাড়াই) === */
-.super-gradient {
+/* === গ্রাডিয়েন্ট টেক্সট এবং হোভার অ্যানিমেশন === */
+.animated-gradient {
   display: inline-block;
   font-weight: bold;
   background: linear-gradient(90deg, #6AC0C0, #C06AC0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  cursor: pointer;
 }
 
-.super-gradient span {
+.animated-gradient span {
   display: inline-block;
-  transform-origin: bottom;
   transition: all 0.6s ease;
+  transform-origin: bottom;
+}
+
+/* হোভার করলে অক্ষর ঘুরে সাদা হবে */
+.animated-gradient:hover span {
   color: white;
   -webkit-text-fill-color: white;
   transform: rotateY(360deg);
 }
 
-/* অ্যানিমেশন ওয়েভ delay */
-.super-gradient span:nth-child(1) { transition-delay: 0s; }
-.super-gradient span:nth-child(2) { transition-delay: 0.05s; }
-.super-gradient span:nth-child(3) { transition-delay: 0.1s; }
-.super-gradient span:nth-child(4) { transition-delay: 0.15s; }
-.super-gradient span:nth-child(5) { transition-delay: 0.2s; }
-.super-gradient span:nth-child(6) { transition-delay: 0.25s; }
-.super-gradient span:nth-child(7) { transition-delay: 0.3s; }
-.super-gradient span:nth-child(8) { transition-delay: 0.35s; }
-.super-gradient span:nth-child(9) { transition-delay: 0.4s; }
-.super-gradient span:nth-child(10) { transition-delay: 0.45s; }
-.super-gradient span:nth-child(11) { transition-delay: 0.5s; }
-.super-gradient span:nth-child(12) { transition-delay: 0.55s; }
-.super-gradient span:nth-child(13) { transition-delay: 0.6s; }
-.super-gradient span:nth-child(14) { transition-delay: 0.65s; }
-.super-gradient span:nth-child(15) { transition-delay: 0.7s; }
+/* ওয়েভ ডিলে */
+.animated-gradient span:nth-child(1) { transition-delay: 0s; }
+.animated-gradient span:nth-child(2) { transition-delay: 0.05s; }
+.animated-gradient span:nth-child(3) { transition-delay: 0.1s; }
+.animated-gradient span:nth-child(4) { transition-delay: 0.15s; }
+.animated-gradient span:nth-child(5) { transition-delay: 0.2s; }
+.animated-gradient span:nth-child(6) { transition-delay: 0.25s; }
+.animated-gradient span:nth-child(7) { transition-delay: 0.3s; }
+.animated-gradient span:nth-child(8) { transition-delay: 0.35s; }
+.animated-gradient span:nth-child(9) { transition-delay: 0.4s; }
+.animated-gradient span:nth-child(10) { transition-delay: 0.45s; }
+.animated-gradient span:nth-child(11) { transition-delay: 0.5s; }
+.animated-gradient span:nth-child(12) { transition-delay: 0.55s; }
+.animated-gradient span:nth-child(13) { transition-delay: 0.6s; }
+.animated-gradient span:nth-child(14) { transition-delay: 0.65s; }
+.animated-gradient span:nth-child(15) { transition-delay: 0.7s; }
