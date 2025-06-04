@@ -18,20 +18,6 @@ These assets are meant to be served via **Netlify CDN** or other trusted hosts a
 
 ---
 
-## 📦 Folder Structure
-abezam-cdn/
-├── global/
-│ └── style.css
-├── templates/
-│ ├── portfolio-01/
-│ │ └── theme.css
-│ └── agency-landing/
-│ └── main.js
-├── components/
-│ └── navbar/
-│ └── navbar.css
-└── README.md
-
 ## 🔐 License
 This CDN content is maintained by Monir Mia and is currently intended for personal and Abezam project use only.
 
