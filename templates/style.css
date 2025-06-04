@@ -1,20 +1,19 @@
-/* === গ্রাডিয়েন্ট টেক্সট এবং অ্যানিমেশন === */
+/* === গ্রাডিয়েন্ট টেক্সট অ্যানিমেশন (হোভার ছাড়াই) === */
 .super-gradient {
   display: inline-block;
   font-weight: bold;
   background: linear-gradient(90deg, #6AC0C0, #C06AC0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  cursor: pointer;
 }
 
 .super-gradient span {
   display: inline-block;
-  transition: all 0.6s ease;
   transform-origin: bottom;
-  color: white; /* সবসময় সাদা রং */
+  transition: all 0.6s ease;
+  color: white;
   -webkit-text-fill-color: white;
-  transform: rotateY(360deg); /* ঘোরানো এনিমেশন, যা সবসময় চলবে */
+  transform: rotateY(360deg);
 }
 
 /* অ্যানিমেশন ওয়েভ delay */
