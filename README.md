@@ -1,21 +1,48 @@
-## README for additional-css
+# abezam-cdn
 
-This folder contains additional JavaScript files used for extending the functionality of the main project.
+🌀 A central CDN repository to host and manage CSS, JavaScript, and asset files for **Abezam** web development projects and templates.
 
-## Purpose
-- To keep custom or third-party JavaScript code separate from the core application scripts.
-- For modular and organized management of JS functionalities.
-- To add enhancements, plugins, or utility scripts without cluttering the main codebase.
+---
 
-## Structure
-- Each JS file inside this folder should ideally focus on a specific functionality or feature.
-- Keep the code clean and well-commented for easy maintenance.
+## 🔥 What is this?
 
-## Usage
-## ❗ Important Note
-- All JS code in this folder is created by Monir Mia.
-- It is forbidden to use this code without my permission.
-- No one can copy, use or distribute this code.
+**abezam-cdn** is a static content delivery repository where we store all reusable frontend assets — such as:
+
+- ✅ Global CSS stylesheets  
+- ✅ Custom UI component styles  
+- ✅ JavaScript utilities  
+- ✅ Fonts, icons, and other CDN assets  
+- ✅ Template-specific styles (per project)
+
+These assets are meant to be served via **Netlify CDN** or other trusted hosts and used across Abezam projects without needing local copies.
+
+---
+
+## 📦 Folder Structure
+abezam-cdn/
+├── global/
+│ └── style.css
+├── templates/
+│ ├── portfolio-01/
+│ │ └── theme.css
+│ └── agency-landing/
+│ └── main.js
+├── components/
+│ └── navbar/
+│ └── navbar.css
+└── README.md
+
+## 🔐 License
+This CDN content is maintained by Monir Mia and is currently intended for personal and Abezam project use only.
+
+Not for public template resale or third-party redistribution without permission.
+
+## 🤝 Contact
+For inquiries, issues, or contributions:
+
+Email: contact@abezam.com
+GitHub: @monir-mia
+Website: www.abezam.com
 
 ## Thank You!
  
