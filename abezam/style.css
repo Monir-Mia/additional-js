@@ -75,16 +75,18 @@
 /* ========= End Heading Style ========= */
 
 /* ========= Homepage Animated Subheading Style ========= */
-.azam-subheading {
+.abezam-subheading {
   font-size: clamp(0.5rem, 1vw, 2rem);
   font-weight: 700;
   color: yellow;
   position: relative;
   display: inline-block;
   overflow: hidden;
+  text-align: center;
+  word-break: break-word;
 }
 
-.azam-subheading::before {
+.abezam-subheading::before {
   content: attr(data-text);
   position: absolute;
   top: 0;
@@ -117,4 +119,5 @@
     background-position: -200% 0;
   }
 }
+
 /* ========= End Subheading Style ========= */
