@@ -3,62 +3,48 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sliding Gradient Text</title>
+<title>Canvas Welcome</title>
 <style>
   body, html {
     margin: 0; padding: 0; height: 100%;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; justify-content: center; align-items: center;
+    background: #222;
+    color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow: hidden;
   }
-
-  .gradient-text {
-    font-size: 4rem;
-    font-weight: 600;
-    background: linear-gradient(270deg, #ff0000, #ff7f7f, #b22222, #ff0000);
-    background-size: 600% 600%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    white-space: nowrap;
-    position: absolute;
-    will-change: transform;
+  canvas {
+    border: 2px solid #fff;
+    background: #333;
   }
 </style>
 </head>
 <body>
-
-<div class="gradient-text" id="text">Welcome to Abezam-CDN</div>
+<canvas id="welcomeCanvas" width="500" height="150"></canvas>
 
 <script>
-  const text = document.getElementById('text');
-  let position = window.innerWidth;
+  const canvas = document.getElementById('welcomeCanvas');
+  const ctx = canvas.getContext('2d');
 
-  function animate() {
-    position -= 2; // speed of sliding
-    if (position < -text.offsetWidth) {
-      position = window.innerWidth;
+  let text = "Welcome!";
+  let x = 0;
+  let speed = 2;
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.font = '48px Arial';
+    ctx.fillStyle = 'lime';
+    ctx.fillText(text, x, 90);
+
+    x += speed;
+    if (x > canvas.width) {
+      x = -ctx.measureText(text).width; // আবার বাম থেকে শুরু করবে
     }
-    text.style.transform = `translateX(${position}px)`;
-    requestAnimationFrame(animate);
+
+    requestAnimationFrame(draw);
   }
 
-  animate();
-
-  // Animate the background gradient (color sliding)
-  let bgPos = 0;
-  function animateGradient() {
-    bgPos += 1;
-    if(bgPos > 600) bgPos = 0;
-    text.style.backgroundPosition = `${bgPos}% 50%`;
-    requestAnimationFrame(animateGradient);
-  }
-  animateGradient();
+  draw();
 </script>
-
 </body>
 </html>
