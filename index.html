@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Welcome To Abezam-CDN</title>
+<style>
+  body, html {
+    margin: 0; padding: 0; height: 100%;
+    display: flex; justify-content: center; align-items: center;
+    background: #222;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  canvas {
+    border: 2px solid #fff;
+    background: #333;
+  }
+</style>
+</head>
+<body>
+<canvas id="welcomeCanvas" width="500" height="150"></canvas>
+
+<script>
+  const canvas = document.getElementById('welcomeCanvas');
+  const ctx = canvas.getContext('2d');
+
+  let text = "Welcome!";
+  let x = 0;
+  let speed = 2;
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.font = '48px Arial';
+    ctx.fillStyle = 'lime';
+    ctx.fillText(text, x, 90);
+
+    x += speed;
+    if (x > canvas.width) {
+      x = -ctx.measureText(text).width; // আবার বাম থেকে শুরু করবে
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+</script>
+</body>
+</html>
