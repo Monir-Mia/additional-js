@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Gradient Text</title>
+<title>Sliding Gradient Text</title>
 <style>
   body, html {
     margin: 0; padding: 0; height: 100%;
@@ -12,23 +12,53 @@
     justify-content: center;
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
   }
 
-  h1 {
-    font-size: 8rem;
-    font-weight: 900;
-    background: linear-gradient(90deg, #ff0000, #ff7f7f, #b22222);
+  .gradient-text {
+    font-size: 4rem;
+    font-weight: 600;
+    background: linear-gradient(270deg, #ff0000, #ff7f7f, #b22222, #ff0000);
+    background-size: 600% 600%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text; /* For Firefox */
+    background-clip: text;
     text-fill-color: transparent;
-    user-select: none;
+    white-space: nowrap;
+    position: absolute;
+    will-change: transform;
   }
 </style>
 </head>
 <body>
 
-<h1>Welcome to Abezam-CDN</h1>
+<div class="gradient-text" id="text">Welcome to Abezam-CDN</div>
+
+<script>
+  const text = document.getElementById('text');
+  let position = window.innerWidth;
+
+  function animate() {
+    position -= 2; // speed of sliding
+    if (position < -text.offsetWidth) {
+      position = window.innerWidth;
+    }
+    text.style.transform = `translateX(${position}px)`;
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  // Animate the background gradient (color sliding)
+  let bgPos = 0;
+  function animateGradient() {
+    bgPos += 1;
+    if(bgPos > 600) bgPos = 0;
+    text.style.backgroundPosition = `${bgPos}% 50%`;
+    requestAnimationFrame(animateGradient);
+  }
+  animateGradient();
+</script>
 
 </body>
 </html>
