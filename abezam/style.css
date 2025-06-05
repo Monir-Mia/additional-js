@@ -56,18 +56,22 @@
 }
 
 /* ========= Responsive Design: Tablet ========= */
+/*
 @media (max-width: 768px) {
   .abezam-heading {
-    font-size: 48px; /* ট্যাবলেটে ছোট আকার */
+    font-size: 48px;
   }
 }
+*/
 
 /* ========= Responsive Design: Mobile ========= */
+/*
 @media (max-width: 480px) {
   .abezam-heading {
-    font-size: 36px; /* মোবাইলে আরও ছোট */
+    font-size: 36px;
   }
 }
+*/
 /* ========= End Heading Style ========= */
 
 /* ========= Homepage Animated Subheading Style ========= */
