@@ -76,14 +76,12 @@
 
 /* ========= Homepage Animated Subheading Style ========= */
 .abezam-subheading {
-  font-size: clamp(0.5rem, 1vw, 2rem);
+  font-size: clamp(0.8rem, 2vw, 2rem);
   font-weight: 700;
   color: yellow;
   position: relative;
   display: inline-block;
   overflow: hidden;
-  text-align: center;
-  word-break: break-word;
 }
 
 .abezam-subheading::before {
@@ -119,5 +117,4 @@
     background-position: -200% 0;
   }
 }
-
 /* ========= End Subheading Style ========= */
