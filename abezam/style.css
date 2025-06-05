@@ -1,19 +1,19 @@
 /* ========= Homepage Animated Heading Style ========= */
 .abezam-heading {
-  font-size: clamp(2rem, 7vw, 8rem); /* ডেস্কটপে বড় হেডিং — Elementor এ 96px ছিল */
-  font-weight: 700; /* মোটা ফন্ট */
-  line-height: 1.2; /* g, y ইত্যাদি নিচে কাটা না যায় */
-  padding-bottom: 10px; /* নিচে অতিরিক্ত স্পেস রাখছি কাটাকাটি ঠেকাতে */
-  display: inline-block; /* টেক্সটের সাইজ অনুযায়ী ব্লক তৈরি */
-  position: relative; /* ::before পজিশন করার জন্য দরকার */
-  color: white; /* মূল লেখা সাদা থাকবে */
-  overflow: visible; /* কোনো অংশ যেন লুকিয়ে না যায় */
-  text-align: center; /* মোবাইলে উপযোগী */
+  font-size: clamp(2rem, 7vw, 8rem);
+  font-weight: 700;
+  line-height: 1.2;
+  padding-bottom: 10px;
+  display: inline-block;
+  position: relative;
+  color: white;
+  overflow: visible;
+  text-align: center;
   word-break: break-word;
 }
 
 /* ========= Animated Yellow Highlight Layer ========= */
-/* এটি টেক্সটের উপরে হলুদ গ্রাডিয়েন্ট হাইলাইট তৈরি করে */
+/* টেক্সটের উপরে গ্রাডিয়েন্ট হাইলাইট তৈরি করে */
 .abezam-heading::before {
   content: attr(data-text); /* টেক্সট কপি করে আবার দেখাচ্ছে */
   position: absolute;
