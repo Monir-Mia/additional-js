@@ -3,61 +3,32 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Welcome to Abezam-CDN</title>
+<title>Gradient Text</title>
 <style>
   body, html {
     margin: 0; padding: 0; height: 100%;
     background: #fff;
-    display: flex; justify-content: center; align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
-  canvas {
-    border: 2px solid #ccc;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    background: #fff;
-    display: block;
+
+  h1 {
+    font-size: 8rem;
+    font-weight: 900;
+    background: linear-gradient(90deg, #ff0000, #ff7f7f, #b22222);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* For Firefox */
+    text-fill-color: transparent;
+    user-select: none;
   }
 </style>
 </head>
 <body>
 
-<canvas id="welcomeCanvas" width="700" height="150"></canvas>
-
-<script>
-  const canvas = document.getElementById('welcomeCanvas');
-  const ctx = canvas.getContext('2d');
-
-  const text = "Welcome to Abezam-CDN";
-  const fontSize = 60;
-  ctx.font = `${fontSize}px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif`;
-
-  let x = canvas.width;
-  const y = canvas.height / 2 + fontSize / 3; // Vertically centered
-  const speed = 3;
-
-  function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // Create gradient
-    const gradient = ctx.createLinearGradient(0, 0, ctx.measureText(text).width, 0);
-    gradient.addColorStop(0, '#ff7e5f');  // orange-ish
-    gradient.addColorStop(0.5, '#feb47b'); // peach
-    gradient.addColorStop(1, '#ff7e5f');  // orange-ish
-
-    ctx.fillStyle = gradient;
-    ctx.font = `${fontSize}px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif`;
-    ctx.fillText(text, x, y);
-
-    x -= speed;
-    if (x + ctx.measureText(text).width < 0) {
-      x = canvas.width;
-    }
-
-    requestAnimationFrame(draw);
-  }
-
-  draw();
-</script>
+<h1>Welcome to Abezam-CDN</h1>
 
 </body>
 </html>
