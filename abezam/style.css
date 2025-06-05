@@ -1,6 +1,6 @@
 /* ========= Homepage Animated Heading Style ========= */
 .abezam-heading {
-  font-size: clamp(1.5rem, 5vw, 8rem); /* ডেস্কটপে বড় হেডিং — Elementor এ 96px ছিল */
+  font-size: clamp(2rem, 7vw, 10rem); /* ডেস্কটপে বড় হেডিং — Elementor এ 96px ছিল */
   font-weight: 700; /* মোটা ফন্ট */
   line-height: 1.2; /* g, y ইত্যাদি নিচে কাটা না যায় */
   padding-bottom: 10px; /* নিচে অতিরিক্ত স্পেস রাখছি কাটাকাটি ঠেকাতে */
